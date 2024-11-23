@@ -1,0 +1,58 @@
+// const createOrders = async (req: Request, res: Response) => {
+//   try {
+//     // const ordersData = req.body
+//     const { email, product: productId, quantity } = req.body
+
+//     // Step 1: Fetch the product to validate stock
+//     const product = await productService.getSingleProductIntoDB(productId)
+//     if (!product) {
+//       return res.status(404).json({
+//         success: false,
+//         message: 'Product not found',
+//       })
+//     }
+//     // Step 2: Check if sufficient stock is available
+//     if (product.quantity < quantity) {
+//       return res.status(400).json({
+//         success: false,
+//         message: 'Insufficient stock available',
+//         data: {
+//           availableStock: product.quantity,
+//         },
+//       })
+//     }
+//     // Step 3: Update product quantity and inStock status
+//     product.quantity = product.quantity - quantity
+//     if (product.quantity === 0) {
+//       product.inStock = false
+//     }
+//     await product.save()
+
+//     const totalPrice = product.price * quantity
+
+//     // Step 4: Create the order
+//     const order = await ordersService.createOrdersIntoDB({
+//       email,
+//       product: productId,
+//       quantity,
+//       totalPrice,
+//     })
+//     // data validation using zod
+//     const zodParsedData = orderValidationSchema.parse(order)
+
+//     // will call service function call data
+//     // const result = await ordersService.createOrdersIntoDB(zodParsedData)
+//     res.status(200).json({
+//       success: true,
+//       message: 'Order created successfully',
+//       data: zodParsedData,
+//     })
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   } catch (err: any) {
+//     res.status(500).json({
+//       success: false,
+//       message: 'Something Went Wrong',
+//       error: err,
+//     })
+//   }
+// }
