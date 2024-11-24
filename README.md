@@ -1,8 +1,8 @@
-# Bicycle Store B4A2V4
+# Bicycle Store
 
 ## Objective
 
-The Bicycle Store B4A2V4 is a backend Express.js application built with TypeScript and MongoDB. It manages bicycles and customer orders efficiently using Mongoose for schema validation and database interaction.
+The Bicycle Store is a backend Express.js application built with TypeScript and MongoDB. It manages bicycles and customer orders efficiently using Mongoose for schema validation and database interaction.
 
 ## Firstly Setup ## ESLint and Prettier
 
