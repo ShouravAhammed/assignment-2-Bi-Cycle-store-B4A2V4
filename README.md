@@ -45,7 +45,7 @@ return result`
 
 ### Products
 
-- **Create a Bicycle**: `POST /api/products`
+- **Create a Bicycle**: `POST /api/products`(Here, I’m adding a new bicycle to the inventory. You can see it successfully adds with all the details)
 - **Get All Bicycles**: `GET /api/products?searchTerm=<type>`
 - **Get Specific Bicycle**: `GET /api/products/:productId`
 - **Update Bicycle**: `PUT /api/products/:productId`
